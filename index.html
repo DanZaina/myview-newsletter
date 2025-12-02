@@ -8,6 +8,7 @@
     <style type="text/css">
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap");
 
+      /* ===== RESET & BASE ===== */
       * {
         box-sizing: border-box;
       }
@@ -19,6 +20,17 @@
         padding: 0;
         font-family: "Poppins", sans-serif;
         font-weight: 400;
+        background-color: #fafafa;
+      }
+
+      table {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      p {
+        line-height: 30px;
+        margin: 0;
       }
 
       a[x-apple-data-detectors] {
@@ -31,35 +43,72 @@
         text-decoration: none;
       }
 
-      p {
-        line-height: 30px;
-      }
-
-      .desktop_hide,
-      .desktop_hide table {
-        mso-hide: all;
-        display: none;
-        max-height: 0px;
-        overflow: hidden;
-      }
-
       .image_block img + div {
         display: none;
       }
 
-      /* Reusable Classes */
-      .row-content {
+      /* ===== LAYOUT ===== */
+      .container {
+        width: 690px;
+        margin: 0 auto;
+      }
+
+      .container-inner {
+        width: 610px;
+        margin: 0 auto;
+      }
+
+      .bg-light {
+        background-color: #fafafa;
+      }
+
+      .bg-white {
+        background-color: #fff;
+      }
+
+      /* ===== CARDS ===== */
+      .card {
         background-color: #fff;
         width: 690px;
         margin: 0 auto;
       }
 
-      .inner-content {
-        width: 610px;
-        margin: 0 auto;
+      .card-top {
+        border-radius: 14px 14px 0 0;
       }
 
-      .section-heading {
+      .card-bottom {
+        border-radius: 0 0 14px 14px;
+      }
+
+      .card-full {
+        border-radius: 14px;
+      }
+
+      /* ===== TYPOGRAPHY ===== */
+      .heading-main {
+        text-align: center;
+        color: #12abe3;
+        font-family: "Poppins", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        line-height: 40px;
+        margin: 0;
+      }
+
+      .heading-sub {
+        text-align: center;
+        color: #4b5563;
+        font-family: "Poppins", sans-serif;
+        font-size: 17px;
+        letter-spacing: 0.4px;
+        line-height: 30px;
+        font-weight: 500;
+        margin: 0;
+      }
+
+      .heading-section {
         text-align: center;
         color: #12abe3;
         font-family: "Poppins", sans-serif;
@@ -70,7 +119,7 @@
         margin: 0;
       }
 
-      .section-text {
+      .text-body {
         text-align: left;
         color: #4b5563;
         font-family: "Poppins", sans-serif;
@@ -78,66 +127,114 @@
         letter-spacing: 0.4px;
         line-height: 30px;
         font-weight: 400;
-        padding-left: 3px;
       }
 
-      .btn-blue {
+      .text-center {
+        text-align: center;
+      }
+
+      .text-white {
+        color: #fff;
+      }
+
+      .text-small {
+        font-size: 14px;
+      }
+
+      .text-xs {
+        font-size: 12px;
+      }
+
+      .link-blue {
+        color: #12abe3;
+      }
+
+      .link-red {
+        color: #ed323f;
+      }
+
+      /* ===== BUTTONS ===== */
+      .btn {
         text-decoration: none;
         display: inline-block;
+        border-radius: 4px;
+        padding: 15px 23px;
+        text-align: center;
+        letter-spacing: 0.9px;
+        font-size: 18px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        line-height: 36px;
+        text-transform: capitalize;
+      }
+
+      .btn-outline-blue {
         color: #12abe3;
         border: 2px solid #12abe3;
-        border-radius: 4px;
-        padding: 15px 23px;
-        text-align: center;
-        letter-spacing: 0.9px;
-        font-size: 18px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        line-height: 36px;
-        text-transform: capitalize;
       }
 
-      .btn-white {
-        text-decoration: none;
-        display: inline-block;
+      .btn-outline-white {
         color: #fff;
         border: 2px solid #fff;
-        border-radius: 4px;
-        padding: 15px 23px;
-        text-align: center;
-        letter-spacing: 0.9px;
-        font-size: 18px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-        line-height: 36px;
-        text-transform: capitalize;
       }
 
+      /* ===== LISTS ===== */
+      .list-styled {
+        text-align: left;
+        color: #4b5563;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.4px;
+        line-height: 30px;
+        font-weight: 400;
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      /* ===== SPACING ===== */
       .spacer {
         height: 25px;
         line-height: 25px;
         font-size: 1px;
       }
 
-      /* Responsive Styles */
+      .pad-section {
+        padding: 10px 20px;
+      }
+
+      .pad-content {
+        padding: 10px;
+      }
+
+      /* ===== UTILITIES ===== */
+      .align-center {
+        text-align: center;
+      }
+
+      .d-block {
+        display: block;
+      }
+
+      .img-responsive {
+        display: block;
+        height: auto;
+        border: 0;
+        max-width: 100%;
+      }
+
+      /* ===== HIDE/SHOW ===== */
+      .desktop_hide,
+      .desktop_hide table {
+        mso-hide: all;
+        display: none;
+        max-height: 0px;
+        overflow: hidden;
+      }
+
+      /* ===== RESPONSIVE ===== */
       @media (max-width: 710px) {
-        .desktop_hide table.icons-inner,
-        .row-5 .column-1 .block-5.social_block .alignment table,
-        .row-7 .column-2 .block-5.social_block .alignment table,
-        .social_block.desktop_hide .social-table {
-          display: inline-block !important;
-        }
-
-        .icons-inner {
-          text-align: center;
-        }
-
-        .icons-inner td {
-          margin: 0 auto;
-        }
-
         .mobile_hide {
-          display: none;
+          display: none !important;
           min-height: 0;
           max-height: 0;
           max-width: 0;
@@ -145,7 +242,8 @@
           font-size: 0px;
         }
 
-        .row-content {
+        .container,
+        .card {
           width: 100% !important;
         }
 
@@ -160,102 +258,44 @@
           max-height: none !important;
         }
 
-        .reverse {
-          display: table;
-          width: 100%;
+        .mobile-pad {
+          padding: 20px 15px 30px !important;
         }
 
-        .reverse .column.first {
-          display: table-footer-group !important;
-        }
-
-        .reverse .column.last {
-          display: table-header-group !important;
-        }
-
-        .row-7 td.column.first .border {
-          padding: 15px 0;
-          border: 0;
-        }
-
-        .row-7 td.column.last .border {
-          padding: 5px 0;
-          border: 0;
-        }
-
-        .row-1 .column-1 .block-1.image_block td.pad {
-          padding: 15px 0 10px !important;
-        }
-
-        .row-3 .column-1 .block-3.heading_block td.pad {
-          padding: 10px 0 !important;
-        }
-
-        .row-5 .column-1 .block-2.heading_block h3,
-        .row-5 .column-1 .block-3.heading_block h3,
-        .row-5 .column-1 .block-4.paragraph_block td.pad > div,
-        .row-5 .column-1 .block-5.social_block .alignment,
-        .row-7 .column-2 .block-2.heading_block h3,
-        .row-7 .column-2 .block-3.heading_block h3,
-        .row-7 .column-2 .block-4.paragraph_block td.pad > div,
-        .row-7 .column-2 .block-5.social_block .alignment {
+        .mobile-center {
           text-align: center !important;
-        }
-
-        .row-5 .column-1 .block-5.social_block td.pad,
-        .row-7 .column-2 .block-5.social_block td.pad {
-          padding: 5px 10px !important;
-        }
-
-        .row-1 .column-1 {
-          padding: 20px 15px 60px !important;
         }
       }
     </style>
   </head>
 
-  <body style="background-color: #fafafa; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
-    <table border="0" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fafafa;" width="100%">
+  <body>
+    <table border="0" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" width="100%">
       <tbody>
         <tr>
           <td>
-            <!-- HEADER SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+
+            <!-- ========== HEADER SECTION ========== -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fafafa; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="container bg-light" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 20px 50px 60px; vertical-align: top;" width="100%">
+                          <td class="mobile-pad" style="padding: 20px 50px 30px; text-align: left; vertical-align: top;">
+                            
                             <!-- Logo -->
-                            <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad" style="padding: 20px 0 10px; width: 100%;">
-                                    <div align="center" class="alignment" style="line-height: 10px;">
-                                      <img alt="MyVIEW company logo" src="https://myview-newsletter.netlify.app/img/logo.png" style="display: block; height: auto; border: 0; max-width: 206.5px; width: 100%;" width="206.5" />
-                                    </div>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                            <div style="text-align: center; padding: 20px 0 10px;">
+                              <img alt="MyVIEW company logo" src="https://myview-newsletter.netlify.app/img/logo.png" style="display: inline-block; height: auto; border: 0; max-width: 206.5px; width: 100%;" width="206.5" />
+                            </div>
 
                             <!-- Main Heading -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <h1 style="margin: 0; text-align: center; color: #12abe3; font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 400; letter-spacing: 0.4px; line-height: 40px;">
-                                      MyView Cardiac Wellness<br />Holiday Programs
-                                    </h1>
-                                    <h3 style="text-align: center; color: #4b5563; font-family: 'Poppins', sans-serif; font-size: 17px; letter-spacing: 0.4px; line-height: 30px; font-weight: 500; padding-left: 3px;">
-                                      Give Yourself the Gift of Better Heart Health This Holiday Season.
-                                    </h3>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                            <div style="padding: 10px;">
+                              <h1 class="heading-main">MyView Cardiac Wellness<br />Holiday Programs</h1>
+                              <h3 class="heading-sub" style="padding-top: 10px;">Give Yourself the Gift of Better Heart Health This Holiday Season.</h3>
+                            </div>
+
                           </td>
                         </tr>
                       </tbody>
@@ -265,30 +305,20 @@
               </tbody>
             </table>
 
-            <!-- HERO IMAGE SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-8" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- ========== HERO IMAGE SECTION ========== -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; color: #000; width: 690px; margin: 0 auto; border-radius: 14px 14px 0 0;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-top" role="presentation">
                       <tbody>
                         <tr>
                           <td>
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; width: 610px; margin: 0 auto;" width="610">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="container-inner bg-white" role="presentation">
                               <tbody>
                                 <tr>
-                                  <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 40px;" width="100%">
-                                    <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                                      <tbody>
-                                        <tr>
-                                          <td class="pad" style="width: 100%;">
-                                            <div align="center" class="alignment" style="line-height: 10px;">
-                                              <img src="https://myview-newsletter.netlify.app/img/hero-image.png" style="display: block; height: auto; border: 0; max-width: 538px; width: 100%;" width="538" alt="Hero Image" />
-                                            </div>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
+                                  <td style="padding-top: 40px; text-align: center;">
+                                    <img src="https://myview-newsletter.netlify.app/img/hero-image.png" class="img-responsive" style="max-width: 538px; margin: 0 auto;" width="538" alt="Hero Image" />
                                   </td>
                                 </tr>
                               </tbody>
@@ -302,32 +332,21 @@
               </tbody>
             </table>
 
-            <!-- INTRO SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- ========== INTRO SECTION ========== -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 10px 20px; vertical-align: top;" width="100%">
-                            <table border="0" cellpadding="10" cellspacing="0" class="heading_block block-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <p class="section-text">Dear Patient,</p>
-                                    <p class="section-text">
-                                      The holidays are a time for connection, reflection and taking care of the people who matter most — including you. 
-                                    </p>
-                                    <p class="section-text">
-                                      At MyView Cardiac Wellness, we're here to support you with virtual programs designed to help you feel your best, manage your heart health, and start the new year with confidence.
-                                    <p class="section-text">
-                                      This season, consider giving yourself the gift of better health with one of our three specialized programs.
-                                    </p>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                          <td class="pad-section">
+                            <div class="pad-content">
+                              <p class="text-body">Dear Patient,</p>
+                              <p class="text-body" style="padding-top: 15px;">The holidays are a time for connection, reflection and taking care of the people who matter most — including you.</p>
+                              <p class="text-body" style="padding-top: 15px;">At MyView Cardiac Wellness, we're here to support you with virtual programs designed to help you feel your best, manage your heart health, and start the new year with confidence.</p>
+                              <p class="text-body" style="padding-top: 15px;">This season, consider giving yourself the gift of better health with one of our three specialized programs.</p>
+                            </div>
                           </td>
                         </tr>
                       </tbody>
@@ -337,17 +356,15 @@
               </tbody>
             </table>
 
-            <!-- SPACER -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Spacer: Card Bottom -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; color: #000; border-radius: 0 0 14px 14px; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-bottom" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 5px; vertical-align: top;" width="100%">
-                            <div class="spacer mobile_hide">&nbsp;</div>
-                          </td>
+                          <td style="padding: 5px;"><div class="spacer mobile_hide">&nbsp;</div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -356,17 +373,15 @@
               </tbody>
             </table>
 
-            <!-- SPACER -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Spacer: Background -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fafafa; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="container bg-light" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 5px; vertical-align: top;" width="100%">
-                            <div class="spacer mobile_hide">&nbsp;</div>
-                          </td>
+                          <td style="padding: 5px;"><div class="spacer mobile_hide">&nbsp;</div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -375,30 +390,21 @@
               </tbody>
             </table>
 
-            <!-- AFIBLIFE HERO IMAGE SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- ========== AFIBLIFE PROGRAM SECTION ========== -->
+            <!-- Image -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; color: #000; width: 690px; margin: 0 auto; border-radius: 14px 14px 0 0;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-top" role="presentation">
                       <tbody>
                         <tr>
                           <td>
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; width: 610px; margin: 0 auto;" width="610">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="container-inner bg-white" role="presentation">
                               <tbody>
                                 <tr>
-                                  <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 40px;" width="100%">
-                                    <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                                      <tbody>
-                                        <tr>
-                                          <td class="pad" style="width: 100%;">
-                                            <div align="center" class="alignment" style="line-height: 10px;">
-                                              <img src="https://myview-newsletter.netlify.app/img/hero-image.png" style="display: block; height: auto; border: 0; max-width: 538px; width: 100%;" width="538" alt="AFibLife Program" />
-                                            </div>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
+                                  <td style="padding-top: 40px; text-align: center;">
+                                    <img src="https://myview-newsletter.netlify.app/img/hero-image.png" class="img-responsive" style="max-width: 538px; margin: 0 auto;" width="538" alt="AFibLife Program" />
                                   </td>
                                 </tr>
                               </tbody>
@@ -412,54 +418,28 @@
               </tbody>
             </table>
 
-            <!-- AFIBLIFE SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Content -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 10px 20px; vertical-align: top;" width="100%">
-                            <!-- Subheading -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="text_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <p class="section-heading">AFibLife: 8-Week AFib Support Program</p>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                            <!-- Content Text -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="heading_block block-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <p class="section-text">Living with atrial fibrillation?</p>
-                                    <p class="section-text">
-                                      AFibLife offers weekly virtual education, symptom-management strategies, and support from cardiac clinicians — so you can feel more confident heading into the new year.
-                                    </p>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                            <!-- CTA Button -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="button_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <div align="center" class="alignment">
-                                      <a href="https://myview-cardiac-wellness-program.myshopify.com/collections/afib-life" class="btn-blue" target="_blank">
-                                        Enrol Today!
-                                      </a>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                          <td class="pad-section">
+                            <!-- Heading -->
+                            <div class="pad-content">
+                              <p class="heading-section">AFibLife: 8-Week AFib Support Program</p>
+                            </div>
+                            <!-- Text -->
+                            <div class="pad-content">
+                              <p class="text-body">Living with atrial fibrillation?</p>
+                              <p class="text-body" style="padding-top: 15px;">AFibLife offers weekly virtual education, symptom-management strategies, and support from cardiac clinicians — so you can feel more confident heading into the new year.</p>
+                            </div>
+                            <!-- Button -->
+                            <div class="pad-content" style="text-align: center;">
+                              <a href="https://myview-cardiac-wellness-program.myshopify.com/collections/afib-life" class="btn btn-outline-blue" target="_blank">Enrol Today!</a>
+                            </div>
                           </td>
                         </tr>
                       </tbody>
@@ -469,17 +449,15 @@
               </tbody>
             </table>
 
-            <!-- SPACER -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Spacer: Card Bottom -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; color: #000; border-radius: 0 0 14px 14px; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-bottom" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 5px; vertical-align: top;" width="100%">
-                            <div class="spacer mobile_hide">&nbsp;</div>
-                          </td>
+                          <td style="padding: 5px;"><div class="spacer mobile_hide">&nbsp;</div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -488,17 +466,15 @@
               </tbody>
             </table>
 
-            <!-- SPACER -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Spacer: Background -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fafafa; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="container bg-light" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 5px; vertical-align: top;" width="100%">
-                            <div class="spacer mobile_hide">&nbsp;</div>
-                          </td>
+                          <td style="padding: 5px;"><div class="spacer mobile_hide">&nbsp;</div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -507,30 +483,21 @@
               </tbody>
             </table>
 
-            <!-- CARDIAC WELLNESS HERO IMAGE SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- ========== CARDIAC WELLNESS PROGRAM SECTION ========== -->
+            <!-- Image -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; color: #000; width: 690px; margin: 0 auto; border-radius: 14px 14px 0 0;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-top" role="presentation">
                       <tbody>
                         <tr>
                           <td>
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; width: 610px; margin: 0 auto;" width="610">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="container-inner bg-white" role="presentation">
                               <tbody>
                                 <tr>
-                                  <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 40px;" width="100%">
-                                    <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                                      <tbody>
-                                        <tr>
-                                          <td class="pad" style="width: 100%;">
-                                            <div align="center" class="alignment" style="line-height: 10px;">
-                                              <img src="https://myview-newsletter.netlify.app/img/hero-image.png" style="display: block; height: auto; border: 0; max-width: 538px; width: 100%;" width="538" alt="Cardiac Wellness Program" />
-                                            </div>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
+                                  <td style="padding-top: 40px; text-align: center;">
+                                    <img src="https://myview-newsletter.netlify.app/img/hero-image.png" class="img-responsive" style="max-width: 538px; margin: 0 auto;" width="538" alt="Cardiac Wellness Program" />
                                   </td>
                                 </tr>
                               </tbody>
@@ -544,54 +511,28 @@
               </tbody>
             </table>
 
-            <!-- CARDIAC WELLNESS SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Content -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 10px 20px; vertical-align: top;" width="100%">
-                            <!-- Subheading -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="text_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <p class="section-heading">Cardiac Wellness: 8-Week Heart Health Program</p>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                            <!-- Content Text -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="heading_block block-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <p class="section-text">A great option if you want to improve overall heart health.</p>
-                                    <p class="section-text">
-                                      Learn practical strategies for nutrition, exercise, stress, and lifestyle habits in a supportive small-group setting.
-                                    </p>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                            <!-- CTA Button -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="button_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <div align="center" class="alignment">
-                                      <a href="https://myview-cardiac-wellness-program.myshopify.com/collections/myview-wellness-programs" class="btn-blue" target="_blank">
-                                        Enrol Today!
-                                      </a>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                          <td class="pad-section">
+                            <!-- Heading -->
+                            <div class="pad-content">
+                              <p class="heading-section">Cardiac Wellness: 8-Week Heart Health Program</p>
+                            </div>
+                            <!-- Text -->
+                            <div class="pad-content">
+                              <p class="text-body">A great option if you want to improve overall heart health.</p>
+                              <p class="text-body" style="padding-top: 15px;">Learn practical strategies for nutrition, exercise, stress, and lifestyle habits in a supportive small-group setting.</p>
+                            </div>
+                            <!-- Button -->
+                            <div class="pad-content" style="text-align: center;">
+                              <a href="https://myview-cardiac-wellness-program.myshopify.com/collections/myview-wellness-programs" class="btn btn-outline-blue" target="_blank">Enrol Today!</a>
+                            </div>
                           </td>
                         </tr>
                       </tbody>
@@ -601,17 +542,15 @@
               </tbody>
             </table>
 
-            <!-- SPACER -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Spacer: Card Bottom -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; color: #000; border-radius: 0 0 14px 14px; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-bottom" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 5px; vertical-align: top;" width="100%">
-                            <div class="spacer mobile_hide">&nbsp;</div>
-                          </td>
+                          <td style="padding: 5px;"><div class="spacer mobile_hide">&nbsp;</div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -620,17 +559,15 @@
               </tbody>
             </table>
 
-            <!-- SPACER -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Spacer: Background -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fafafa; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="container bg-light" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 5px; vertical-align: top;" width="100%">
-                            <div class="spacer mobile_hide">&nbsp;</div>
-                          </td>
+                          <td style="padding: 5px;"><div class="spacer mobile_hide">&nbsp;</div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -639,30 +576,21 @@
               </tbody>
             </table>
 
-            <!-- ONE-ON-ONE HERO IMAGE SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- ========== ONE-ON-ONE PROGRAM SECTION ========== -->
+            <!-- Image -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; color: #000; width: 690px; margin: 0 auto; border-radius: 14px 14px 0 0;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-top" role="presentation">
                       <tbody>
                         <tr>
                           <td>
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; width: 610px; margin: 0 auto;" width="610">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="container-inner bg-white" role="presentation">
                               <tbody>
                                 <tr>
-                                  <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 40px;" width="100%">
-                                    <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                                      <tbody>
-                                        <tr>
-                                          <td class="pad" style="width: 100%;">
-                                            <div align="center" class="alignment" style="line-height: 10px;">
-                                              <img src="https://myview-newsletter.netlify.app/img/coaching.png" style="display: block; height: auto; border: 0; max-width: 538px; width: 100%;" width="538" alt="One-on-One Program" />
-                                            </div>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
+                                  <td style="padding-top: 40px; text-align: center;">
+                                    <img src="https://myview-newsletter.netlify.app/img/coaching.png" class="img-responsive" style="max-width: 538px; margin: 0 auto;" width="538" alt="One-on-One Program" />
                                   </td>
                                 </tr>
                               </tbody>
@@ -676,57 +604,33 @@
               </tbody>
             </table>
 
-            <!-- ONE-ON-ONE SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Content -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 10px 20px; vertical-align: top;" width="100%">
-                            <!-- Subheading -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="text_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <p class="section-heading">One-on-One Cardiac Support Services</p>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                            <!-- Content Text -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="heading_block block-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <p class="section-text">Prefer individual care? We offer virtual one-on-one:</p>
-                                    <ul style="text-align: left; color: #4b5563; font-family: 'Poppins', sans-serif; font-size: 16px; letter-spacing: 0.4px; line-height: 30px; font-weight: 400;">
-                                      <li>Cardiac health &amp; wellness coaching</li>
-                                      <li>Exercise physiology</li>
-                                      <li>Mental health support</li>
-                                      <li>Cardiac-focused nutrition services</li>
-                                    </ul>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                            <!-- CTA Button -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="button_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <div align="center" class="alignment">
-                                      <a href="https://myview-cardiac-wellness-program.myshopify.com/collections/virtual-one-on-one-services" class="btn-blue" target="_blank">
-                                        Enrol Today!
-                                      </a>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                          <td class="pad-section">
+                            <!-- Heading -->
+                            <div class="pad-content">
+                              <p class="heading-section">One-on-One Cardiac Support Services</p>
+                            </div>
+                            <!-- Text -->
+                            <div class="pad-content">
+                              <p class="text-body">Prefer individual care? We offer virtual one-on-one:</p>
+                              <ul class="list-styled">
+                                <li>Cardiac health &amp; wellness coaching</li>
+                                <li>Exercise physiology</li>
+                                <li>Mental health support</li>
+                                <li>Cardiac-focused nutrition services</li>
+                              </ul>
+                            </div>
+                            <!-- Button -->
+                            <div class="pad-content" style="text-align: center;">
+                              <a href="https://myview-cardiac-wellness-program.myshopify.com/collections/virtual-one-on-one-services" class="btn btn-outline-blue" target="_blank">Enrol Today!</a>
+                            </div>
                           </td>
                         </tr>
                       </tbody>
@@ -736,17 +640,15 @@
               </tbody>
             </table>
 
-            <!-- SPACER -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Spacer: Card Bottom -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; color: #000; border-radius: 0 0 14px 14px; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-bottom" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 5px; vertical-align: top;" width="100%">
-                            <div class="spacer mobile_hide">&nbsp;</div>
-                          </td>
+                          <td style="padding: 5px;"><div class="spacer mobile_hide">&nbsp;</div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -755,17 +657,15 @@
               </tbody>
             </table>
 
-            <!-- SPACER -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Spacer: Background -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fafafa; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="container bg-light" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 5px; vertical-align: top;" width="100%">
-                            <div class="spacer mobile_hide">&nbsp;</div>
-                          </td>
+                          <td style="padding: 5px;"><div class="spacer mobile_hide">&nbsp;</div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -774,42 +674,25 @@
               </tbody>
             </table>
 
-            <!-- CTA BANNER SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- ========== CTA BANNER SECTION ========== -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; background-image: url('https://myview-newsletter.netlify.app/img/cta-background.jpg'); background-repeat: no-repeat; background-size: cover; border-radius: 14px; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-full" role="presentation" style="background-image: url('https://myview-newsletter.netlify.app/img/cta-background.jpg'); background-repeat: no-repeat; background-size: cover;">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 30px 0; vertical-align: top;" width="100%">
+                          <td style="padding: 30px 10px;">
                             <!-- CTA Text -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="text_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <p style="text-align: center; color: white; font-family: 'Poppins', sans-serif; font-size: 20px; letter-spacing: 0.4px; line-height: 40px; font-weight: 400; margin-bottom: 0;">
-                                      All programs are fully virtual and open for winter registration. Programs can be reimbursed through most extended healthcare plans.
-                                    </p>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
+                            <div class="pad-content">
+                              <p class="text-body text-white text-center" style="font-size: 20px; line-height: 40px;">
+                                All programs are fully virtual and open for winter registration. Programs can be reimbursed through most extended healthcare plans.
+                              </p>
+                            </div>
                             <!-- CTA Button -->
-                            <table border="0" cellpadding="10" cellspacing="0" class="button_block block-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td class="pad">
-                                    <div align="center" class="alignment">
-                                      <a href="https://myview-cardiac-wellness-program.myshopify.com/products/myview-cardiac-wellness-virtual-1-month-trial-program?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="btn-white" target="_blank">
-                                        Enrol Today!
-                                      </a>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                            <div class="pad-content" style="text-align: center;">
+                              <a href="https://myview-cardiac-wellness-program.myshopify.com/products/myview-cardiac-wellness-virtual-1-month-trial-program?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" class="btn btn-outline-white" target="_blank">Enrol Today!</a>
+                            </div>
                           </td>
                         </tr>
                       </tbody>
@@ -819,17 +702,15 @@
               </tbody>
             </table>
 
-            <!-- SPACER -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- Spacer: Background -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fafafa; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="container bg-light" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding: 5px; vertical-align: top;" width="100%">
-                            <div class="spacer mobile_hide">&nbsp;</div>
-                          </td>
+                          <td style="padding: 5px;"><div class="spacer mobile_hide">&nbsp;</div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -838,38 +719,37 @@
               </tbody>
             </table>
 
-            <!-- SOCIAL/QR CODE SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- ========== FOOTER CONTACT SECTION ========== -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; color: #000; width: 690px; margin: 0 auto;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card" role="presentation">
                       <tbody>
-                        <tr>
-                          <td height="75" style="font-size: 0px;">&nbsp;</td>
-                        </tr>
+                        <tr><td height="75" style="font-size: 0px;">&nbsp;</td></tr>
+                        
                         <!-- Logo -->
                         <tr>
-                          <td class="res-center" style="color: white; text-align: center;">
-                            <img src="https://myview-newsletter.netlify.app/img/logo.png" style="display: block; margin: auto;" width="250" alt="MyVIEW Logo" />
+                          <td style="text-align: center;">
+                            <img src="https://myview-newsletter.netlify.app/img/logo.png" style="display: inline-block; margin: 0 auto;" width="250" alt="MyVIEW Logo" />
                           </td>
                         </tr>
-                        <tr>
-                          <td height="30" style="font-size: 0px;">&nbsp;</td>
-                        </tr>
+                        
+                        <tr><td height="30" style="font-size: 0px;">&nbsp;</td></tr>
+                        
                         <!-- Contact Info -->
                         <tr>
-                          <td class="pad" style="text-align: center; color: #4b5563; font-family: 'Poppins', sans-serif; font-size: 16px; letter-spacing: 0.4px; line-height: 25px; padding: 0 20px;">
+                          <td class="text-body text-center" style="padding: 0 20px; line-height: 25px;">
                             To learn more, visit
-                            <a href="https://my-view.ca/cardiac-wellness/" style="color: #12abe3;" target="_blank">my-view.ca/cardiac-wellness</a>
+                            <a href="https://my-view.ca/cardiac-wellness/" class="link-blue" target="_blank">my-view.ca/cardiac-wellness</a>
                             or email us at
-                            <a href="mailto:wellness@my-view.ca" style="color: #12abe3;" target="_blank">wellness@my-view.ca</a>
+                            <a href="mailto:wellness@my-view.ca" class="link-blue" target="_blank">wellness@my-view.ca</a>
                             and we'll help you choose the right program for your needs.
                           </td>
                         </tr>
-                        <tr>
-                          <td height="30" style="font-size: 0px;">&nbsp;</td>
-                        </tr>
+                        
+                        <tr><td height="30" style="font-size: 0px;">&nbsp;</td></tr>
+                        
                         <!-- QR Code -->
                         <tr>
                           <td style="text-align: center;">
@@ -878,9 +758,8 @@
                             </a>
                           </td>
                         </tr>
-                        <tr>
-                          <td height="57" style="font-size: 0px;">&nbsp;</td>
-                        </tr>
+                        
+                        <tr><td height="57" style="font-size: 0px;">&nbsp;</td></tr>
                       </tbody>
                     </table>
                   </td>
@@ -888,52 +767,49 @@
               </tbody>
             </table>
 
-            <!-- FOOTER SECTION -->
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+            <!-- ========== FOOTER COPYRIGHT SECTION ========== -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #fff; border-radius: 0 0 14px 14px; color: #000; width: 690px; margin: 0 auto 50px;" width="690">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-bottom" role="presentation" style="margin-bottom: 50px;">
                       <tbody>
                         <!-- Divider -->
                         <tr>
                           <td style="text-align: center;">
                             <table align="center" bgcolor="#aeafb0" border="0" cellpadding="0" cellspacing="0" style="border-radius: 10px; opacity: 0.2; margin: 0 auto;">
                               <tbody>
-                                <tr>
-                                  <td height="1" style="font-size: 0px;" width="600">&nbsp;</td>
-                                </tr>
+                                <tr><td height="1" style="font-size: 0px;" width="600">&nbsp;</td></tr>
                               </tbody>
                             </table>
                           </td>
                         </tr>
-                        <tr>
-                          <td height="23" style="font-size: 0px;">&nbsp;</td>
-                        </tr>
+                        
+                        <tr><td height="23" style="font-size: 0px;">&nbsp;</td></tr>
+                        
                         <!-- Copyright -->
                         <tr>
-                          <td class="res-center" style="text-align: center; color: #12abe3; font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 400; letter-spacing: 0.4px; line-height: 30px;">
+                          <td class="text-center text-small link-blue" style="font-family: 'Poppins', sans-serif; letter-spacing: 0.4px; line-height: 30px;">
                             © 2023 MyVIEW Wellness. All rights reserved.
-                            <strong style="color: #ed323f; font-weight: 400;">
-                              <a href="[UNSUBSCRIBE_URL]" style="color: #ed323f;">Unsubscribe.</a>
-                            </strong>
+                            <a href="[UNSUBSCRIBE_URL]" class="link-red" style="font-weight: 400;">Unsubscribe.</a>
                           </td>
                         </tr>
+                        
                         <!-- Disclaimer -->
                         <tr>
-                          <td class="res-center" style="text-align: center; color: #4b5563; font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.4px; line-height: 30px; padding: 10px 30px;">
+                          <td class="text-body text-center text-xs" style="padding: 10px 30px; line-height: 22px;">
                             You are receiving this email because of your association with PACE Cardiology. MyVIEW programing can be reimbursed as a health and wellness service under certain private insurance plans.
                           </td>
                         </tr>
-                        <tr>
-                          <td height="50" style="font-size: 0px;">&nbsp;</td>
-                        </tr>
+                        
+                        <tr><td height="50" style="font-size: 0px;">&nbsp;</td></tr>
                       </tbody>
                     </table>
                   </td>
                 </tr>
               </tbody>
             </table>
+
           </td>
         </tr>
       </tbody>
