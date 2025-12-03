@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <style type="text/css">
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap");
 
       /* ===== RESET & BASE ===== */
       * {
@@ -115,18 +115,18 @@
         font-size: 20px;
         letter-spacing: 0.4px;
         line-height: 30px;
-        font-weight: 400;
+        font-weight: 500;
         margin: 0;
       }
 
       .text-body {
         text-align: left;
-        color: #4b5563;
+        color: #45556c;
         font-family: "Poppins", sans-serif;
         font-size: 16px;
         letter-spacing: 0.4px;
         line-height: 30px;
-        font-weight: 400;
+        font-weight: 500;
       }
 
       .text-center {
@@ -169,8 +169,8 @@
       }
 
       .btn-outline-blue {
-        color: #12abe3;
-        border: 2px solid #12abe3;
+        color: #496764;
+        border: 2px solid #496764;
       }
 
       .btn-outline-white {
@@ -185,8 +185,8 @@
         font-family: "Poppins", sans-serif;
         font-size: 16px;
         letter-spacing: 0.4px;
-        line-height: 30px;
-        font-weight: 400;
+        line-height: 40px;
+        font-weight: 500;
         margin: 0;
         padding-left: 20px;
       }
@@ -220,6 +220,7 @@
         height: auto;
         border: 0;
         max-width: 100%;
+        width: 100%;
       }
 
       /* ===== HIDE/SHOW ===== */
@@ -243,7 +244,8 @@
         }
 
         .container,
-        .card {
+        .card,
+        .container-inner {
           width: 100% !important;
         }
 
@@ -259,11 +261,58 @@
         }
 
         .mobile-pad {
-          padding: 20px 15px 30px !important;
+          padding: 15px !important;
+        }
+
+        .mobile-pad-hero {
+          padding: 20px 15px 0 !important;
+        }
+
+        .pad-section {
+          padding: 10px 15px !important;
         }
 
         .mobile-center {
           text-align: center !important;
+        }
+
+        .heading-main {
+          font-size: 24px !important;
+          line-height: 32px !important;
+        }
+
+        .heading-section {
+          font-size: 18px !important;
+          line-height: 26px !important;
+        }
+
+        .text-body {
+          font-size: 15px !important;
+          line-height: 26px !important;
+        }
+
+        .btn {
+          padding: 12px 20px !important;
+          font-size: 16px !important;
+          line-height: 28px !important;
+        }
+
+        .img-responsive {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+
+        .card-full,
+        .card-top {
+          border-radius: 10px 10px 0 0 !important;
+        }
+
+        .card-bottom {
+          border-radius: 0 0 10px 10px !important;
+        }
+
+        .hero-img {
+          border-radius: 10px !important;
         }
       }
     </style>
@@ -275,27 +324,16 @@
         <tr>
           <td>
 
-            <!-- ========== HEADER SECTION ========== -->
+            <!-- ========== HEADER HERO IMAGE ========== -->
             <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="container bg-light" role="presentation">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-full" role="presentation" style="margin-top: 20px;">
                       <tbody>
                         <tr>
-                          <td class="mobile-pad" style="padding: 20px 50px 30px; text-align: left; vertical-align: top;">
-                            
-                            <!-- Logo -->
-                            <div style="text-align: center; padding: 20px 0 10px;">
-                              <img alt="MyVIEW company logo" src="https://myview-newsletter.netlify.app/img/logo.png" style="display: inline-block; height: auto; border: 0; max-width: 206.5px; width: 100%;" width="206.5" />
-                            </div>
-
-                            <!-- Main Heading -->
-                            <div style="padding: 10px;">
-                              <h1 class="heading-main">MyView Cardiac Wellness<br />Holiday Programs</h1>
-                              <h3 class="heading-sub" style="padding-top: 10px;">Give Yourself the Gift of Better Heart Health This Holiday Season.</h3>
-                            </div>
-
+                          <td style="text-align: center;">
+                            <img src="https://myview-newsletter.netlify.app/img/holiday-hero.png" class="img-responsive hero-img" style="max-width: 690px; margin: 0 auto; border-radius: 14px;" width="690" alt="Holiday Hero Image" />
                           </td>
                         </tr>
                       </tbody>
@@ -305,25 +343,15 @@
               </tbody>
             </table>
 
-            <!-- ========== HERO IMAGE SECTION ========== -->
+            <!-- Spacer: Background -->
             <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-top" role="presentation">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="container bg-light" role="presentation">
                       <tbody>
                         <tr>
-                          <td>
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="container-inner bg-white" role="presentation">
-                              <tbody>
-                                <tr>
-                                  <td style="padding-top: 40px; text-align: center;">
-                                    <img src="https://myview-newsletter.netlify.app/img/hero-image.png" class="img-responsive" style="max-width: 538px; margin: 0 auto;" width="538" alt="Hero Image" />
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
+                          <td style="padding: 5px;"><div class="spacer mobile_hide">&nbsp;</div></td>
                         </tr>
                       </tbody>
                     </table>
@@ -337,10 +365,15 @@
               <tbody>
                 <tr>
                   <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card" role="presentation">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-top" role="presentation">
                       <tbody>
                         <tr>
-                          <td class="pad-section">
+                          <td class="pad-section" style="padding-top: 30px;">
+                            <!-- Heading -->
+                            <div class="pad-content">
+                              <p class="heading-section">Give Yourself the Gift of Better Heart Health This Holiday Season.</p>
+                            </div>
+                            <!-- Text -->
                             <div class="pad-content">
                               <p class="text-body">Dear Patient,</p>
                               <p class="text-body" style="padding-top: 15px;">The holidays are a time for connection, reflection and taking care of the people who matter most — including you.</p>
@@ -403,8 +436,8 @@
                             <table align="center" border="0" cellpadding="0" cellspacing="0" class="container-inner bg-white" role="presentation">
                               <tbody>
                                 <tr>
-                                  <td style="padding-top: 40px; text-align: center;">
-                                    <img src="https://myview-newsletter.netlify.app/img/hero-image.png" class="img-responsive" style="max-width: 538px; margin: 0 auto;" width="538" alt="AFibLife Program" />
+                                  <td style="padding: 40px 15px 0; text-align: center;">
+                                    <img src="https://myview-newsletter.netlify.app/img/afib-hero.png" class="img-responsive" style="max-width: 538px; margin: 0 auto;" width="538" alt="AFibLife Program" />
                                   </td>
                                 </tr>
                               </tbody>
@@ -496,8 +529,8 @@
                             <table align="center" border="0" cellpadding="0" cellspacing="0" class="container-inner bg-white" role="presentation">
                               <tbody>
                                 <tr>
-                                  <td style="padding-top: 40px; text-align: center;">
-                                    <img src="https://myview-newsletter.netlify.app/img/hero-image.png" class="img-responsive" style="max-width: 538px; margin: 0 auto;" width="538" alt="Cardiac Wellness Program" />
+                                  <td style="padding: 40px 15px 0; text-align: center;">
+                                    <img src="https://myview-newsletter.netlify.app/img/wellness-hero.png" class="img-responsive" style="max-width: 538px; margin: 0 auto;" width="538" alt="Cardiac Wellness Program" />
                                   </td>
                                 </tr>
                               </tbody>
@@ -589,7 +622,7 @@
                             <table align="center" border="0" cellpadding="0" cellspacing="0" class="container-inner bg-white" role="presentation">
                               <tbody>
                                 <tr>
-                                  <td style="padding-top: 40px; text-align: center;">
+                                  <td style="padding: 40px 15px 0; text-align: center;">
                                     <img src="https://myview-newsletter.netlify.app/img/coaching.png" class="img-responsive" style="max-width: 538px; margin: 0 auto;" width="538" alt="One-on-One Program" />
                                   </td>
                                 </tr>
@@ -682,7 +715,7 @@
                     <table align="center" border="0" cellpadding="0" cellspacing="0" class="card card-full" role="presentation" style="background-image: url('https://myview-newsletter.netlify.app/img/cta-background.jpg'); background-repeat: no-repeat; background-size: cover;">
                       <tbody>
                         <tr>
-                          <td style="padding: 30px 10px;">
+                          <td style="padding: 30px 20px;">
                             <!-- CTA Text -->
                             <div class="pad-content">
                               <p class="text-body text-white text-center" style="font-size: 20px; line-height: 40px;">
@@ -730,8 +763,8 @@
                         
                         <!-- Logo -->
                         <tr>
-                          <td style="text-align: center;">
-                            <img src="https://myview-newsletter.netlify.app/img/logo.png" style="display: inline-block; margin: 0 auto;" width="250" alt="MyVIEW Logo" />
+                          <td style="text-align: center; padding: 0 15px;">
+                            <img src="https://myview-newsletter.netlify.app/img/logo.png" class="img-responsive" style="display: inline-block; margin: 0 auto; max-width: 250px;" width="250" alt="MyVIEW Logo" />
                           </td>
                         </tr>
                         
@@ -751,13 +784,13 @@
                         <tr><td height="30" style="font-size: 0px;">&nbsp;</td></tr>
                         
                         <!-- QR Code -->
-                        <tr>
-                          <td style="text-align: center;">
+                        <!-- <tr>
+                          <td style="text-align: center; padding: 0 15px;">
                             <a href="https://linktr.ee/myviewwellness" style="text-decoration: none;" target="_blank">
                               <img src="https://myview-newsletter.netlify.app/img/qr-code.png" style="max-width: 150px; width: 100%; display: inline-block; border: 0; border-radius: 5px;" width="150" alt="QR Code" />
                             </a>
                           </td>
-                        </tr>
+                        </tr> -->
                         
                         <tr><td height="57" style="font-size: 0px;">&nbsp;</td></tr>
                       </tbody>
@@ -776,10 +809,10 @@
                       <tbody>
                         <!-- Divider -->
                         <tr>
-                          <td style="text-align: center;">
-                            <table align="center" bgcolor="#aeafb0" border="0" cellpadding="0" cellspacing="0" style="border-radius: 10px; opacity: 0.2; margin: 0 auto;">
+                          <td style="text-align: center; padding: 0 15px;">
+                            <table align="center" bgcolor="#aeafb0" border="0" cellpadding="0" cellspacing="0" style="border-radius: 10px; opacity: 0.2; margin: 0 auto; width: 100%; max-width: 600px;">
                               <tbody>
-                                <tr><td height="1" style="font-size: 0px;" width="600">&nbsp;</td></tr>
+                                <tr><td height="1" style="font-size: 0px;">&nbsp;</td></tr>
                               </tbody>
                             </table>
                           </td>
@@ -789,7 +822,7 @@
                         
                         <!-- Copyright -->
                         <tr>
-                          <td class="text-center text-small link-blue" style="font-family: 'Poppins', sans-serif; letter-spacing: 0.4px; line-height: 30px;">
+                          <td class="text-center text-small link-blue" style="font-family: 'Poppins', sans-serif; letter-spacing: 0.4px; line-height: 30px; padding: 0 15px;">
                             © 2023 MyVIEW Wellness. All rights reserved.
                             <a href="[UNSUBSCRIBE_URL]" class="link-red" style="font-weight: 400;">Unsubscribe.</a>
                           </td>
